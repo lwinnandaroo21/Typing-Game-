@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(178, 183, 245);
+    width: 100%;
+    height: 100vh;
+}
+
+.bubble{
+    width: 5vw;
+    height: 5vw;
+    background-color: rgba(242, 28, 28, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.18);
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+    margin-left: 50px;
+    display: inline-block;
+    animation: broken 8s linear infinite reverse;
+    animation-delay: calc(var(--i)*-0.5s);
+}
+
+@keyframes broken {
+    0%{
+        transform: translateY(0) ;
+    }
+    40%{
+        transform: translateY(150px) ;
+    }
+    60%{
+        transform: translateY(250px) ;
+    }
+    80%{
+        transform: translateY(350px) ;
+    }
+    100%{
+        transform: translateY(600px) ;
+    }
+}
